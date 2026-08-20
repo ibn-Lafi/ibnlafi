@@ -59,7 +59,7 @@ export function Navbar({
           <ThemeToggle label={nav.themeToggle.toggle} />
           <a
             href="#contact"
-            className="inline-flex h-9 items-center rounded-full bg-foreground px-4 text-sm font-medium text-background transition-opacity hover:opacity-85"
+            className="inline-flex h-9 items-center rounded-full bg-foreground px-4 text-sm font-medium text-background shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md hover:opacity-90"
           >
             {nav.links.contact}
           </a>

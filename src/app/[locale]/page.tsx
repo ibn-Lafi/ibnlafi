@@ -23,7 +23,7 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
     <>
       <Navbar locale={locale} nav={content.nav} />
       <main>
-        <Hero hero={content.hero} />
+        <Hero hero={content.hero} resume={content.resume} />
         <About about={content.about} />
         <Experience experience={content.experience} />
         <Skills skills={content.skills} />

@@ -25,12 +25,15 @@ export function Education({ education }: { education: EducationContent }) {
                 <h3 className="text-base font-semibold sm:text-lg">
                   {item.degree}
                 </h3>
-                <span className="text-sm text-muted-foreground">
-                  {item.period}
-                </span>
+                {item.period && (
+                  <span className="text-sm text-muted-foreground">
+                    {item.period}
+                  </span>
+                )}
               </div>
               <p className="mt-1 text-sm text-muted-foreground">
-                {item.institution} — {item.location}
+                {item.institution}
+                {item.location && ` — ${item.location}`}
               </p>
               {item.description && (
                 <p className="mt-2 text-sm leading-relaxed text-foreground/80">

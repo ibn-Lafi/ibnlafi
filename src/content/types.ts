@@ -27,6 +27,11 @@ export interface HeroContent {
   location: string;
 }
 
+export interface ResumeContent {
+  href: string;
+  downloadName: string;
+}
+
 export interface AboutContent {
   title: string;
   paragraphs: string[];
@@ -60,8 +65,9 @@ export interface SkillsContent {
 
 export interface AchievementItem {
   title: string;
+  organization: string;
   description: string;
-  year: string;
+  year?: string;
 }
 
 export interface AchievementsContent {
@@ -86,8 +92,8 @@ export interface EducationContent {
 
 export interface CourseItem {
   name: string;
-  provider: string;
-  year: string;
+  provider?: string;
+  year?: string;
 }
 
 export interface CoursesContent {
@@ -100,6 +106,9 @@ export interface ContactContent {
   title: string;
   subtitle: string;
   email: string;
+  emailLabel: string;
+  phone?: string;
+  phoneLabel?: string;
   location: string;
   socials: { label: string; href: string }[];
 }
@@ -118,6 +127,7 @@ export interface PortfolioContent {
   meta: SiteMeta;
   nav: NavContent;
   hero: HeroContent;
+  resume: ResumeContent;
   about: AboutContent;
   experience: ExperienceContent;
   skills: SkillsContent;

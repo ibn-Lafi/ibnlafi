@@ -87,6 +87,41 @@ export function GlobeIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+export function MailIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.75}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <rect x="3" y="5" width="18" height="14" rx="2.5" />
+      <path d="m4 7 8 6 8-6" />
+    </svg>
+  );
+}
+
+export function PhoneIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.75}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <path d="M6.5 3.5h2.7l1.4 4.3-2 1.7a12.3 12.3 0 0 0 5.9 5.9l1.7-2 4.3 1.4v2.7c0 1.1-.9 2-2 2C10.9 19.5 4.5 13.1 4.5 5.5c0-1.1.9-2 2-2Z" />
+    </svg>
+  );
+}
+
 export function ArrowIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg

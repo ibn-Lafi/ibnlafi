@@ -11,22 +11,26 @@ export function Courses({ courses }: { courses: CoursesContent }) {
           subtitle={courses.subtitle}
         />
 
-        <div className="overflow-hidden rounded-2xl border border-border">
+        <div className="overflow-hidden rounded-2xl border border-border shadow-sm">
           <ul className="divide-y divide-border">
             {courses.items.map((course, i) => (
               <li
                 key={i}
-                className="flex flex-wrap items-center justify-between gap-2 px-5 py-4"
+                className="flex flex-wrap items-center justify-between gap-2 px-5 py-4 transition-colors hover:bg-muted"
               >
                 <div>
                   <p className="text-sm font-semibold">{course.name}</p>
-                  <p className="text-xs text-muted-foreground">
-                    {course.provider}
-                  </p>
+                  {course.provider && (
+                    <p className="text-xs text-muted-foreground">
+                      {course.provider}
+                    </p>
+                  )}
                 </div>
-                <span className="text-xs font-medium text-muted-foreground">
-                  {course.year}
-                </span>
+                {course.year && (
+                  <span className="text-xs font-medium text-muted-foreground">
+                    {course.year}
+                  </span>
+                )}
               </li>
             ))}
           </ul>

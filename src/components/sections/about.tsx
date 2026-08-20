@@ -23,7 +23,7 @@ export function About({ about }: { about: AboutContent }) {
             {about.highlights.map((h) => (
               <div
                 key={h.label}
-                className="rounded-2xl border border-border p-4"
+                className="rounded-2xl border border-border p-4 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md dark:hover:border-foreground/30"
               >
                 <dt className="text-xs text-muted-foreground">{h.label}</dt>
                 <dd className="mt-1 text-xl font-semibold">{h.value}</dd>

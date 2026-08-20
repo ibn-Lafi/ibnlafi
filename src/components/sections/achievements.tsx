@@ -19,10 +19,10 @@ export function Achievements({
           {achievements.items.map((item, i) => (
             <div
               key={i}
-              className="flex flex-col gap-2 rounded-2xl border border-border p-5"
+              className="flex flex-col gap-2 rounded-2xl border border-border p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md dark:hover:border-foreground/30"
             >
               <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                {item.year}
+                {item.year ?? item.organization}
               </span>
               <h3 className="text-base font-semibold">{item.title}</h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
