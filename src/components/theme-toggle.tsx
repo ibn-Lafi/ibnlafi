@@ -12,10 +12,10 @@ export function ThemeToggle({ label }: { label: string }) {
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
       aria-label={label}
       title={label}
-      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-foreground transition-colors hover:bg-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+      className="relative inline-flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full border border-border text-foreground transition-all hover:-translate-y-0.5 hover:bg-muted hover:shadow-sm active:scale-90 active:duration-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
     >
-      <SunIcon className="hidden h-[18px] w-[18px] dark:block" />
-      <MoonIcon className="block h-[18px] w-[18px] dark:hidden" />
+      <SunIcon className="absolute h-[18px] w-[18px] rotate-90 scale-50 opacity-0 transition-all duration-300 ease-out dark:rotate-0 dark:scale-100 dark:opacity-100" />
+      <MoonIcon className="absolute h-[18px] w-[18px] rotate-0 scale-100 opacity-100 transition-all duration-300 ease-out dark:-rotate-90 dark:scale-50 dark:opacity-0" />
     </button>
   );
 }

@@ -1,4 +1,5 @@
 import { SectionHeading } from "@/components/section-heading";
+import { Reveal } from "@/components/reveal";
 import type { ExperienceContent } from "@/content/types";
 
 export function Experience({ experience }: { experience: ExperienceContent }) {
@@ -11,7 +12,7 @@ export function Experience({ experience }: { experience: ExperienceContent }) {
           subtitle={experience.subtitle}
         />
 
-        <ol className="space-y-10">
+        <Reveal as="ol" stagger className="space-y-10">
           {experience.items.map((item, i) => (
             <li
               key={i}
@@ -49,7 +50,7 @@ export function Experience({ experience }: { experience: ExperienceContent }) {
               </div>
             </li>
           ))}
-        </ol>
+        </Reveal>
       </div>
     </section>
   );

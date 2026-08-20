@@ -1,4 +1,5 @@
 import { SectionHeading } from "@/components/section-heading";
+import { Reveal } from "@/components/reveal";
 import type { AboutContent } from "@/content/types";
 
 export function About({ about }: { about: AboutContent }) {
@@ -19,7 +20,11 @@ export function About({ about }: { about: AboutContent }) {
             ))}
           </div>
 
-          <dl className="grid grid-cols-3 gap-4 sm:grid-cols-1 sm:gap-6">
+          <Reveal
+            as="dl"
+            stagger
+            className="grid grid-cols-3 gap-4 sm:grid-cols-1 sm:gap-6"
+          >
             {about.highlights.map((h) => (
               <div
                 key={h.label}
@@ -29,7 +34,7 @@ export function About({ about }: { about: AboutContent }) {
                 <dd className="mt-1 text-xl font-semibold">{h.value}</dd>
               </div>
             ))}
-          </dl>
+          </Reveal>
         </div>
       </div>
     </section>

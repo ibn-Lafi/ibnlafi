@@ -75,6 +75,15 @@ export default async function LocaleLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
+        {/*
+          The scroll-reveal animations rely on an IntersectionObserver
+          (see components/reveal.tsx) to add the class that makes content
+          visible. Without JavaScript that class never gets added, so this
+          keeps every section readable instead of stuck at opacity: 0.
+        */}
+        <noscript>
+          <style>{`.reveal,.reveal-stagger>*{opacity:1!important;transform:none!important;animation:none!important;}`}</style>
+        </noscript>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

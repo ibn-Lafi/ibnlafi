@@ -1,4 +1,5 @@
 import { SectionHeading } from "@/components/section-heading";
+import { Reveal } from "@/components/reveal";
 import type { AchievementsContent } from "@/content/types";
 
 export function Achievements({
@@ -15,7 +16,7 @@ export function Achievements({
           subtitle={achievements.subtitle}
         />
 
-        <div className="grid gap-5 sm:grid-cols-2">
+        <Reveal stagger className="grid gap-5 sm:grid-cols-2">
           {achievements.items.map((item, i) => (
             <div
               key={i}
@@ -30,7 +31,7 @@ export function Achievements({
               </p>
             </div>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

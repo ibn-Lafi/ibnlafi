@@ -14,7 +14,7 @@ export function Hero({
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,var(--color-muted),transparent_60%)]"
       />
-      <div className="mx-auto flex max-w-5xl flex-col items-start px-5 py-20 sm:px-8 sm:py-32">
+      <div className="hero-in mx-auto flex max-w-5xl flex-col items-start px-5 py-20 sm:px-8 sm:py-32">
         <p className="text-sm font-medium text-muted-foreground">
           {hero.greeting}
         </p>
@@ -31,7 +31,7 @@ export function Hero({
         <div className="mt-9 flex flex-wrap items-center gap-3">
           <a
             href="#contact"
-            className="group inline-flex h-12 items-center gap-2 rounded-full bg-foreground px-6 text-sm font-semibold text-background shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-lg hover:opacity-90"
+            className="group inline-flex h-12 items-center gap-2 rounded-full bg-foreground px-6 text-sm font-semibold text-background shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-lg hover:opacity-90 active:scale-95"
           >
             {hero.ctaPrimary}
             <ArrowIcon className="h-4 w-4 transition-transform rtl:rotate-180 group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5" />
@@ -39,7 +39,7 @@ export function Hero({
           <a
             href={resume.href}
             download={resume.downloadName}
-            className="inline-flex h-12 items-center gap-2 rounded-full border border-border bg-background px-6 text-sm font-semibold shadow-sm transition-all hover:-translate-y-0.5 hover:bg-muted hover:shadow-lg"
+            className="inline-flex h-12 items-center gap-2 rounded-full border border-border bg-background px-6 text-sm font-semibold shadow-sm transition-all hover:-translate-y-0.5 hover:bg-muted hover:shadow-lg active:scale-95"
           >
             {hero.ctaSecondary}
           </a>

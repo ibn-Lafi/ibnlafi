@@ -16,7 +16,7 @@ export function Contact({ contact }: { contact: ContactContent }) {
           <a
             href={`mailto:${contact.email}`}
             aria-label={contact.emailLabel}
-            className="inline-flex h-12 items-center gap-2 rounded-full bg-foreground px-6 text-sm font-medium text-background shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md hover:opacity-90"
+            className="inline-flex h-12 items-center gap-2 rounded-full bg-foreground px-6 text-sm font-medium text-background shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md hover:opacity-90 active:scale-95"
           >
             <MailIcon className="h-4 w-4" />
             {contact.email}
@@ -26,7 +26,7 @@ export function Contact({ contact }: { contact: ContactContent }) {
             <a
               href={`tel:${contact.phone}`}
               aria-label={contact.phoneLabel}
-              className="inline-flex h-12 items-center gap-2 rounded-full border border-border px-6 text-sm font-medium shadow-sm transition-all hover:-translate-y-0.5 hover:bg-muted hover:shadow-md"
+              className="inline-flex h-12 items-center gap-2 rounded-full border border-border px-6 text-sm font-medium shadow-sm transition-all hover:-translate-y-0.5 hover:bg-muted hover:shadow-md active:scale-95"
               dir="ltr"
             >
               <PhoneIcon className="h-4 w-4" />

@@ -1,4 +1,5 @@
 import { SectionHeading } from "@/components/section-heading";
+import { Reveal } from "@/components/reveal";
 import type { EducationContent } from "@/content/types";
 
 export function Education({ education }: { education: EducationContent }) {
@@ -11,7 +12,7 @@ export function Education({ education }: { education: EducationContent }) {
           subtitle={education.subtitle}
         />
 
-        <ol className="space-y-8">
+        <Reveal as="ol" stagger className="space-y-8">
           {education.items.map((item, i) => (
             <li
               key={i}
@@ -42,7 +43,7 @@ export function Education({ education }: { education: EducationContent }) {
               )}
             </li>
           ))}
-        </ol>
+        </Reveal>
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import { SectionHeading } from "@/components/section-heading";
+import { Reveal } from "@/components/reveal";
 import type { CoursesContent } from "@/content/types";
 
 export function Courses({ courses }: { courses: CoursesContent }) {
@@ -12,7 +13,7 @@ export function Courses({ courses }: { courses: CoursesContent }) {
         />
 
         <div className="overflow-hidden rounded-2xl border border-border shadow-sm">
-          <ul className="divide-y divide-border">
+          <Reveal as="ul" stagger className="divide-y divide-border">
             {courses.items.map((course, i) => (
               <li
                 key={i}
@@ -33,7 +34,7 @@ export function Courses({ courses }: { courses: CoursesContent }) {
                 )}
               </li>
             ))}
-          </ul>
+          </Reveal>
         </div>
       </div>
     </section>

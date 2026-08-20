@@ -1,4 +1,5 @@
 import { SectionHeading } from "@/components/section-heading";
+import { Reveal } from "@/components/reveal";
 import type { SkillsContent } from "@/content/types";
 
 export function Skills({ skills }: { skills: SkillsContent }) {
@@ -11,7 +12,7 @@ export function Skills({ skills }: { skills: SkillsContent }) {
           subtitle={skills.subtitle}
         />
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <Reveal stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {skills.groups.map((group) => (
             <div
               key={group.category}
@@ -30,7 +31,7 @@ export function Skills({ skills }: { skills: SkillsContent }) {
               </ul>
             </div>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   );
