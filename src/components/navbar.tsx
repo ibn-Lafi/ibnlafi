@@ -33,7 +33,7 @@ export function Navbar({
   }));
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur supports-[backdrop-filter]:bg-background/70">
+    <header className="sticky top-0 z-50 bg-background/85 backdrop-blur supports-[backdrop-filter]:bg-background/70">
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-5 sm:px-8">
         <Link
           href={`/${locale}`}
@@ -66,6 +66,7 @@ export function Navbar({
         </div>
 
         <div className="flex items-center gap-2 md:hidden">
+          <LanguageToggle targetLocale={otherLocale} label={nav.languageToggle} />
           <ThemeToggle label={nav.themeToggle.toggle} />
           <button
             type="button"
@@ -107,15 +108,11 @@ export function Navbar({
               </li>
             ))}
           </ul>
-          <div className="mt-4 flex items-center gap-2 border-t border-border pt-4">
-            <LanguageToggle
-              targetLocale={otherLocale}
-              label={nav.languageToggle}
-            />
+          <div className="mt-4 border-t border-border pt-4">
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="inline-flex h-9 flex-1 items-center justify-center rounded-full bg-foreground px-4 text-sm font-medium text-background transition-transform active:scale-95"
+              className="inline-flex h-9 w-full items-center justify-center rounded-full bg-foreground px-4 text-sm font-medium text-background transition-transform active:scale-95"
             >
               {nav.links.contact}
             </a>
