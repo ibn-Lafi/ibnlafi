@@ -92,37 +92,6 @@ html[lang="ar"] * {
   }
 }
 
-.scroll-stack-window {
-  position: sticky;
-  top: 0;
-  overflow: hidden;
-  background: var(--color-background);
-  will-change: transform, opacity;
-}
-
-.scroll-stack-content {
-  will-change: transform;
-}
-
-/* Never let a section a keyboard/screen-reader user has focused into
-   stay faded out or offset mid-transition. */
-.scroll-stack-window:focus-within {
-  opacity: 1 !important;
-  transform: none !important;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .scroll-stack-window {
-    position: static;
-    opacity: 1 !important;
-    transform: none !important;
-  }
-
-  .scroll-stack-content {
-    transform: none !important;
-  }
-}
-
 @keyframes reveal-up {
   from {
     opacity: 0;
