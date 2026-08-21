@@ -1,5 +1,6 @@
 export interface NavContent {
   brand: string;
+  monogram: string;
   links: {
     about: string;
     experience: string;
@@ -13,8 +14,6 @@ export interface NavContent {
     toggle: string;
   };
   languageToggle: string;
-  menuOpen: string;
-  menuClose: string;
 }
 
 export interface HeroContent {

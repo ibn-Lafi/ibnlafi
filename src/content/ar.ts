@@ -8,6 +8,7 @@ export const ar: PortfolioContent = {
   },
   nav: {
     brand: "علي الحسناني",
+    monogram: "ع.ح",
     links: {
       about: "نبذة عني",
       experience: "الخبرات",
@@ -21,8 +22,6 @@ export const ar: PortfolioContent = {
       toggle: "تبديل المظهر",
     },
     languageToggle: "English",
-    menuOpen: "فتح القائمة",
-    menuClose: "إغلاق القائمة",
   },
   hero: {
     greeting: "مرحباً، أنا",

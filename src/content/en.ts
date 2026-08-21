@@ -8,6 +8,7 @@ export const en: PortfolioContent = {
   },
   nav: {
     brand: "Ali Al-Hasnani",
+    monogram: "AH",
     links: {
       about: "About",
       experience: "Experience",
@@ -21,8 +22,6 @@ export const en: PortfolioContent = {
       toggle: "Toggle theme",
     },
     languageToggle: "العربية",
-    menuOpen: "Open menu",
-    menuClose: "Close menu",
   },
   hero: {
     greeting: "Hi, I'm",
