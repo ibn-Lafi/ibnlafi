@@ -34,9 +34,16 @@ export function Navbar({
           href={`/${locale}`}
           aria-label={nav.brand}
           title={nav.brand}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-sm font-bold tracking-tight transition-all hover:-translate-y-0.5 hover:shadow-sm"
+          className="flex h-10 w-10 items-center justify-center rounded-full transition-all hover:-translate-y-0.5 hover:shadow-sm"
         >
-          {nav.monogram}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo.svg"
+            alt={nav.brand}
+            width={40}
+            height={40}
+            className="h-10 w-10 rounded-full object-cover"
+          />
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">

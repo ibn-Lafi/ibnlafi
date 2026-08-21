@@ -8,7 +8,6 @@ export const en: PortfolioContent = {
   },
   nav: {
     brand: "Ali Al-Hasnani",
-    monogram: "AH",
     links: {
       about: "About",
       experience: "Experience",

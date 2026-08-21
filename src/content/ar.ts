@@ -8,7 +8,6 @@ export const ar: PortfolioContent = {
   },
   nav: {
     brand: "علي الحسناني",
-    monogram: "ع.ح",
     links: {
       about: "نبذة عني",
       experience: "الخبرات",

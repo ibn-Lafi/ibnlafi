@@ -1,6 +1,5 @@
 export interface NavContent {
   brand: string;
-  monogram: string;
   links: {
     about: string;
     experience: string;
