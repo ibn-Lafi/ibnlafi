@@ -7,7 +7,6 @@ export const en: PortfolioContent = {
       "The personal portfolio of Ali Al-Hasnani — about, experience, skills, achievements, education, and courses.",
   },
   nav: {
-    brand: "Ali Al-Hasnani",
     themeToggle: {
       toggle: "Toggle theme",
     },
@@ -29,11 +28,6 @@ export const en: PortfolioContent = {
     paragraphs: [
       "I specialize in building and developing brands and managing products and businesses. I have experience turning ideas and traditional operations into growable brands through market research, understanding customer needs, product development, building identity and positioning, and identifying growth opportunities.",
       "I focus on connecting the product to the brand and to market needs, to build projects and products with real value, competitive strength, and sustainable growth.",
-    ],
-    highlights: [
-      { label: "Years of experience", value: "3+" },
-      { label: "Skills", value: "12+" },
-      { label: "Courses & certificates", value: "7" },
     ],
   },
   experience: {
@@ -164,9 +158,5 @@ export const en: PortfolioContent = {
     phoneLabel: "Phone",
     location: "Makkah, Saudi Arabia",
     socials: [],
-  },
-  footer: {
-    rights: "All rights reserved",
-    builtWith: "Designed & built with care",
   },
 };

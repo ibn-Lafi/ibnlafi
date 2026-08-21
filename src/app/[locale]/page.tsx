@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import { isLocale } from "@/i18n/config";
 import { getContent } from "@/content";
 import { Navbar } from "@/components/navbar";
-import { Footer } from "@/components/footer";
 import { Reveal } from "@/components/reveal";
 import { Hero } from "@/components/sections/hero";
 import { About } from "@/components/sections/about";
@@ -47,7 +46,6 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
           <Contact contact={content.contact} />
         </Reveal>
       </main>
-      <Footer footer={content.footer} brand={content.nav.brand} />
     </>
   );
 }

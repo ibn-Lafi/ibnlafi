@@ -1,5 +1,4 @@
 export interface NavContent {
-  brand: string;
   themeToggle: {
     toggle: string;
   };
@@ -22,7 +21,6 @@ export interface ResumeContent {
 export interface AboutContent {
   title: string;
   paragraphs: string[];
-  highlights: { label: string; value: string }[];
 }
 
 export interface ExperienceItem {
@@ -100,11 +98,6 @@ export interface ContactContent {
   socials: { label: string; href: string }[];
 }
 
-export interface FooterContent {
-  rights: string;
-  builtWith: string;
-}
-
 export interface SiteMeta {
   title: string;
   description: string;
@@ -122,5 +115,4 @@ export interface PortfolioContent {
   education: EducationContent;
   courses: CoursesContent;
   contact: ContactContent;
-  footer: FooterContent;
 }
