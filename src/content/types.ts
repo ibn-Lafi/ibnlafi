@@ -1,14 +1,5 @@
 export interface NavContent {
   brand: string;
-  links: {
-    about: string;
-    experience: string;
-    skills: string;
-    achievements: string;
-    education: string;
-    courses: string;
-    contact: string;
-  };
   themeToggle: {
     toggle: string;
   };

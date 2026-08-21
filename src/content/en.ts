@@ -8,15 +8,6 @@ export const en: PortfolioContent = {
   },
   nav: {
     brand: "Ali Al-Hasnani",
-    links: {
-      about: "About",
-      experience: "Experience",
-      skills: "Skills",
-      achievements: "Achievements",
-      education: "Education",
-      courses: "Courses",
-      contact: "Contact",
-    },
     themeToggle: {
       toggle: "Toggle theme",
     },

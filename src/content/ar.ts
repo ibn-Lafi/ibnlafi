@@ -8,15 +8,6 @@ export const ar: PortfolioContent = {
   },
   nav: {
     brand: "علي الحسناني",
-    links: {
-      about: "نبذة عني",
-      experience: "الخبرات",
-      skills: "المهارات",
-      achievements: "الإنجازات",
-      education: "التعليم",
-      courses: "الدورات",
-      contact: "تواصل",
-    },
     themeToggle: {
       toggle: "تبديل المظهر",
     },
