@@ -24,9 +24,6 @@ export function Hero({
         <p className="mt-4 text-lg font-medium text-foreground/80 sm:text-xl">
           {hero.role}
         </p>
-        <p className="mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-          {hero.tagline}
-        </p>
 
         <div className="mt-9 flex flex-wrap items-center gap-3">
           <a
@@ -44,10 +41,6 @@ export function Hero({
             {hero.ctaSecondary}
           </a>
         </div>
-
-        <p className="mt-10 text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
-          {hero.location}
-        </p>
       </div>
     </section>
   );

@@ -17,11 +17,8 @@ export const en: PortfolioContent = {
     greeting: "Hi, I'm",
     name: "Ali Al-Hasnani",
     role: "Product & Brand Management",
-    tagline:
-      "I specialize in building and developing brands and managing products and businesses. I turn ideas and traditional operations into growable brands through market research, customer needs analysis, product development, identity and positioning, and identifying growth opportunities.",
     ctaPrimary: "Get in touch",
     ctaSecondary: "Download CV",
-    location: "Makkah, Saudi Arabia",
   },
   resume: {
     href: "/cv.pdf",

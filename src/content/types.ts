@@ -10,10 +10,8 @@ export interface HeroContent {
   greeting: string;
   name: string;
   role: string;
-  tagline: string;
   ctaPrimary: string;
   ctaSecondary: string;
-  location: string;
 }
 
 export interface ResumeContent {
