@@ -1,5 +1,6 @@
 import { SectionHeading } from "@/components/section-heading";
 import { Reveal } from "@/components/reveal";
+import { BriefcaseIcon } from "@/components/icons";
 import type { ExperienceContent } from "@/content/types";
 
 export function Experience({ experience }: { experience: ExperienceContent }) {
@@ -10,18 +11,21 @@ export function Experience({ experience }: { experience: ExperienceContent }) {
           eyebrow="02"
           title={experience.title}
           subtitle={experience.subtitle}
+          icon={<BriefcaseIcon className="h-5 w-5" />}
         />
 
         <Reveal as="ol" stagger className="space-y-10">
           {experience.items.map((item, i) => (
             <li
               key={i}
-              className="relative grid gap-2 border-s-2 border-border ps-6 sm:grid-cols-[1fr_2fr] sm:gap-8"
+              className="relative grid gap-2 border-s-2 border-border ps-8 sm:grid-cols-[1fr_2fr] sm:gap-8"
             >
               <span
                 aria-hidden="true"
-                className="absolute -start-[7px] top-1 h-3 w-3 rounded-full bg-foreground"
-              />
+                className="absolute -start-[15px] top-0 flex h-7 w-7 items-center justify-center rounded-full border-2 border-background bg-foreground text-background"
+              >
+                <BriefcaseIcon className="h-3.5 w-3.5" />
+              </span>
               <div>
                 <p className="text-sm font-medium text-muted-foreground">
                   {item.period}

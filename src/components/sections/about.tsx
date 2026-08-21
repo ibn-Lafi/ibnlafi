@@ -1,11 +1,16 @@
 import { SectionHeading } from "@/components/section-heading";
+import { UserIcon } from "@/components/icons";
 import type { AboutContent } from "@/content/types";
 
 export function About({ about }: { about: AboutContent }) {
   return (
     <section id="about" className="scroll-mt-16 border-b border-border">
       <div className="mx-auto max-w-5xl px-5 py-16 sm:px-8 sm:py-24">
-        <SectionHeading eyebrow="01" title={about.title} />
+        <SectionHeading
+          eyebrow="01"
+          title={about.title}
+          icon={<UserIcon className="h-5 w-5" />}
+        />
 
         <div className="max-w-3xl space-y-4">
           {about.paragraphs.map((p, i) => (

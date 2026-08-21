@@ -31,10 +31,10 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
           <Experience experience={content.experience} />
         </Reveal>
         <Reveal>
-          <Skills skills={content.skills} />
+          <Achievements achievements={content.achievements} />
         </Reveal>
         <Reveal>
-          <Achievements achievements={content.achievements} />
+          <Skills skills={content.skills} />
         </Reveal>
         <Reveal>
           <Education education={content.education} />
