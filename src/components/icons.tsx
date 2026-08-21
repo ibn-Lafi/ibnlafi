@@ -122,6 +122,24 @@ export function PhoneIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+export function WhatsAppIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.75}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <path d="M6.5 17.5 4.5 19.5l.7-2.9A8 8 0 1 1 8 19.4l-1.5-1.9Z" />
+      <path d="M9 9.5c0-.6.4-1.3.9-1.3s.9.5 1 1c.2.5.5 1.2.5 1.5 0 .4-.5 1-.8 1.4-.2.3-.3.5 0 .9.5.7 1.6 1.8 2.6 2.2.4.2.6.1.9-.2.3-.3.7-.8 1.1-.8.3 0 1 .3 1.5.6.5.3.9.4 1 .7.1.3.1 1-.2 1.4-.4.5-1.3.9-1.9.9-1.9 0-4.9-2-6.1-4.3-.3-.6-.5-1.2-.5-1.7 0-.5.1-.9-.1-1.3Z" />
+    </svg>
+  );
+}
+
 export function UserIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg

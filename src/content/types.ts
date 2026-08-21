@@ -92,8 +92,9 @@ export interface ContactContent {
   subtitle: string;
   email: string;
   emailLabel: string;
-  phone?: string;
-  phoneLabel?: string;
+  whatsapp?: string;
+  whatsappDisplay?: string;
+  whatsappLabel?: string;
   location: string;
   socials: { label: string; href: string }[];
 }

@@ -1,4 +1,4 @@
-import { MailIcon, PhoneIcon } from "@/components/icons";
+import { MailIcon, WhatsAppIcon } from "@/components/icons";
 import type { ContactContent } from "@/content/types";
 
 export function Contact({ contact }: { contact: ContactContent }) {
@@ -22,15 +22,17 @@ export function Contact({ contact }: { contact: ContactContent }) {
             {contact.email}
           </a>
 
-          {contact.phone && (
+          {contact.whatsapp && (
             <a
-              href={`tel:${contact.phone}`}
-              aria-label={contact.phoneLabel}
+              href={`https://wa.me/${contact.whatsapp}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={contact.whatsappLabel}
               className="inline-flex h-12 items-center gap-2 rounded-full border border-border px-6 text-sm font-medium shadow-sm transition-all hover:-translate-y-0.5 hover:bg-muted hover:shadow-md active:scale-95"
               dir="ltr"
             >
-              <PhoneIcon className="h-4 w-4" />
-              {contact.phone}
+              <WhatsAppIcon className="h-4 w-4" />
+              {contact.whatsappDisplay}
             </a>
           )}
         </div>
