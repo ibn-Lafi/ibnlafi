@@ -43,7 +43,7 @@ export function SectionTabs({ tabs }: { tabs: TabDef[] }) {
         <div
           role="tablist"
           onKeyDown={handleKeyDown}
-          className="flex flex-wrap gap-2"
+          className="scrollbar-none -mx-5 flex flex-nowrap gap-2 overflow-x-auto px-5 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0 sm:pb-0"
         >
           {tabs.map((tab) => (
             <button
@@ -56,7 +56,7 @@ export function SectionTabs({ tabs }: { tabs: TabDef[] }) {
               tabIndex={tab.id === activeTab.id ? 0 : -1}
               onClick={() => setActiveId(tab.id)}
               className={cn(
-                "inline-flex items-center gap-2 rounded-full border px-4 py-2.5 text-sm font-medium transition-all active:scale-95",
+                "inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full border px-4 py-2.5 text-sm font-medium transition-all active:scale-95",
                 tab.id === activeTab.id
                   ? "border-foreground bg-foreground text-background shadow-sm"
                   : "border-border text-muted-foreground hover:-translate-y-0.5 hover:bg-muted hover:text-foreground"

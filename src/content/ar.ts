@@ -16,7 +16,7 @@ export const ar: PortfolioContent = {
     greeting: "مرحباً، أنا",
     name: "علي الحسناني",
     role: "إدارة وتطوير المنتجات والعلامات التجارية",
-    ctaSecondary: "تحميل السيرة الذاتية",
+    ctaSecondary: "السيرة الذاتية",
   },
   resume: {
     href: "/cv.pdf",
@@ -154,7 +154,7 @@ export const ar: PortfolioContent = {
   },
   contact: {
     email: "aloos909@gmail.com",
-    emailLabel: "البريد الإلكتروني",
+    emailLabel: "البريد",
     whatsapp: "966550772934",
     whatsappDisplay: "+966 55 077 2934",
     whatsappLabel: "واتساب",
