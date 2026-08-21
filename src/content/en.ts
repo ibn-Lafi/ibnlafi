@@ -25,7 +25,7 @@ export const en: PortfolioContent = {
   about: {
     title: "About Me",
     paragraphs: [
-      "I specialize in building and developing brands and managing products and businesses. I have experience turning ideas and traditional operations into growable brands through market research, understanding customer needs, product development, building identity and positioning, and identifying growth opportunities.",
+      "I specialize in building and developing brand strategy and managing products and businesses. I have experience turning ideas and traditional operations into growable brands through market research, understanding customer needs, product development, building identity and positioning, and identifying growth opportunities.",
       "I focus on connecting the product to the brand and to market needs, to build projects and products with real value, competitive strength, and sustainable growth.",
     ],
   },
