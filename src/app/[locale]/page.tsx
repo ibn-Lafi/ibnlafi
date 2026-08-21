@@ -3,7 +3,7 @@ import { isLocale } from "@/i18n/config";
 import { getContent } from "@/content";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-import { Reveal } from "@/components/reveal";
+import { ScrollStack } from "@/components/scroll-stack";
 import { Hero } from "@/components/sections/hero";
 import { About } from "@/components/sections/about";
 import { Experience } from "@/components/sections/experience";
@@ -24,28 +24,16 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
     <>
       <Navbar locale={locale} nav={content.nav} />
       <main>
-        <Hero hero={content.hero} resume={content.resume} />
-        <Reveal>
+        <ScrollStack>
+          <Hero hero={content.hero} resume={content.resume} />
           <About about={content.about} />
-        </Reveal>
-        <Reveal>
           <Experience experience={content.experience} />
-        </Reveal>
-        <Reveal>
           <Skills skills={content.skills} />
-        </Reveal>
-        <Reveal>
           <Achievements achievements={content.achievements} />
-        </Reveal>
-        <Reveal>
           <Education education={content.education} />
-        </Reveal>
-        <Reveal>
           <Courses courses={content.courses} />
-        </Reveal>
-        <Reveal>
           <Contact contact={content.contact} />
-        </Reveal>
+        </ScrollStack>
       </main>
       <Footer footer={content.footer} brand={content.nav.brand} />
     </>

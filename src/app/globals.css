@@ -92,6 +92,24 @@ html[lang="ar"] * {
   }
 }
 
+.scroll-stack-item {
+  will-change: transform, opacity;
+}
+
+/* Never let a section a keyboard/screen-reader user has focused into
+   stay faded out or offset mid-transition. */
+.scroll-stack-item:focus-within {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-stack-item {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 @keyframes reveal-up {
   from {
     opacity: 0;
