@@ -1,4 +1,4 @@
-import { ArrowIcon, MailIcon, WhatsAppIcon } from "@/components/icons";
+import { DownloadIcon, MailIcon, WhatsAppIcon } from "@/components/icons";
 import type { ContactContent, HeroContent, ResumeContent } from "@/content/types";
 
 export function Hero({
@@ -27,15 +27,14 @@ export function Hero({
           {hero.role}
         </p>
 
-        <div className="mt-9 flex flex-wrap items-center gap-3">
+        <div className="mt-9 grid w-full max-w-xl grid-cols-3 gap-2 sm:gap-3">
           <a
             href={`mailto:${contact.email}`}
             aria-label={contact.emailLabel}
-            className="group inline-flex h-12 items-center gap-2 rounded-full bg-foreground px-6 text-sm font-semibold text-background shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-lg hover:opacity-90 active:scale-95"
+            className="inline-flex h-12 min-w-0 items-center justify-center gap-1.5 rounded-full bg-foreground px-3 text-xs font-semibold text-background shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-lg hover:opacity-90 active:scale-95 sm:px-5 sm:text-sm"
           >
-            <MailIcon className="h-4 w-4" />
-            {contact.email}
-            <ArrowIcon className="h-4 w-4 transition-transform rtl:rotate-180 group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5" />
+            <MailIcon className="h-4 w-4 shrink-0" />
+            <span className="truncate">{contact.email}</span>
           </a>
 
           {contact.whatsapp && (
@@ -44,20 +43,21 @@ export function Hero({
               target="_blank"
               rel="noopener noreferrer"
               aria-label={contact.whatsappLabel}
-              className="inline-flex h-12 items-center gap-2 rounded-full border border-border bg-background px-6 text-sm font-semibold shadow-sm transition-all hover:-translate-y-0.5 hover:bg-muted hover:shadow-lg active:scale-95"
+              className="inline-flex h-12 min-w-0 items-center justify-center gap-1.5 rounded-full border border-border bg-background px-3 text-xs font-semibold shadow-sm transition-all hover:-translate-y-0.5 hover:bg-muted hover:shadow-lg active:scale-95 sm:px-5 sm:text-sm"
               dir="ltr"
             >
-              <WhatsAppIcon className="h-4 w-4" />
-              {contact.whatsappDisplay}
+              <WhatsAppIcon className="h-4 w-4 shrink-0" />
+              <span className="truncate">{contact.whatsappDisplay}</span>
             </a>
           )}
 
           <a
             href={resume.href}
             download={resume.downloadName}
-            className="inline-flex h-12 items-center gap-2 rounded-full border border-border bg-background px-6 text-sm font-semibold shadow-sm transition-all hover:-translate-y-0.5 hover:bg-muted hover:shadow-lg active:scale-95"
+            className="inline-flex h-12 min-w-0 items-center justify-center gap-1.5 rounded-full border border-border bg-background px-3 text-xs font-semibold shadow-sm transition-all hover:-translate-y-0.5 hover:bg-muted hover:shadow-lg active:scale-95 sm:px-5 sm:text-sm"
           >
-            {hero.ctaSecondary}
+            <DownloadIcon className="h-4 w-4 shrink-0" />
+            <span className="truncate">{hero.ctaSecondary}</span>
           </a>
         </div>
 

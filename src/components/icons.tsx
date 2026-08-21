@@ -270,3 +270,21 @@ export function ArrowIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function DownloadIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.75}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <path d="M12 3.5v11M7.5 10l4.5 4.5L16.5 10" />
+      <path d="M4.5 16.5V19a1.5 1.5 0 0 0 1.5 1.5h12a1.5 1.5 0 0 0 1.5-1.5v-2.5" />
+    </svg>
+  );
+}
