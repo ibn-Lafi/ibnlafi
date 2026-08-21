@@ -16,7 +16,6 @@ export const en: PortfolioContent = {
     greeting: "Hi, I'm",
     name: "Ali Al-Hasnani",
     role: "Product & Brand Management",
-    ctaPrimary: "Get in touch",
     ctaSecondary: "Download CV",
   },
   resume: {
@@ -150,8 +149,6 @@ export const en: PortfolioContent = {
     ],
   },
   contact: {
-    title: "Get in Touch",
-    subtitle: "I'd love to hear from you",
     email: "aloos909@gmail.com",
     emailLabel: "Email",
     whatsapp: "966550772934",

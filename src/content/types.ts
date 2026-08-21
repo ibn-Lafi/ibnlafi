@@ -9,7 +9,6 @@ export interface HeroContent {
   greeting: string;
   name: string;
   role: string;
-  ctaPrimary: string;
   ctaSecondary: string;
 }
 
@@ -88,8 +87,6 @@ export interface CoursesContent {
 }
 
 export interface ContactContent {
-  title: string;
-  subtitle: string;
   email: string;
   emailLabel: string;
   whatsapp?: string;

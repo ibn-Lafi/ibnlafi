@@ -10,7 +10,6 @@ import { Skills } from "@/components/sections/skills";
 import { Achievements } from "@/components/sections/achievements";
 import { Education } from "@/components/sections/education";
 import { Courses } from "@/components/sections/courses";
-import { Contact } from "@/components/sections/contact";
 
 export default async function LocalePage({ params }: PageProps<"/[locale]">) {
   const { locale } = await params;
@@ -23,7 +22,11 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
     <>
       <Navbar locale={locale} nav={content.nav} />
       <main>
-        <Hero hero={content.hero} resume={content.resume} />
+        <Hero
+          hero={content.hero}
+          resume={content.resume}
+          contact={content.contact}
+        />
         <Reveal>
           <About about={content.about} />
         </Reveal>
@@ -41,9 +44,6 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
         </Reveal>
         <Reveal>
           <Courses courses={content.courses} />
-        </Reveal>
-        <Reveal>
-          <Contact contact={content.contact} />
         </Reveal>
       </main>
     </>

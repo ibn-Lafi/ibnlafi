@@ -1,12 +1,14 @@
-import { ArrowIcon } from "@/components/icons";
-import type { HeroContent, ResumeContent } from "@/content/types";
+import { ArrowIcon, MailIcon, WhatsAppIcon } from "@/components/icons";
+import type { ContactContent, HeroContent, ResumeContent } from "@/content/types";
 
 export function Hero({
   hero,
   resume,
+  contact,
 }: {
   hero: HeroContent;
   resume: ResumeContent;
+  contact: ContactContent;
 }) {
   return (
     <section className="relative overflow-hidden border-b border-border">
@@ -27,12 +29,29 @@ export function Hero({
 
         <div className="mt-9 flex flex-wrap items-center gap-3">
           <a
-            href="#contact"
+            href={`mailto:${contact.email}`}
+            aria-label={contact.emailLabel}
             className="group inline-flex h-12 items-center gap-2 rounded-full bg-foreground px-6 text-sm font-semibold text-background shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-lg hover:opacity-90 active:scale-95"
           >
-            {hero.ctaPrimary}
+            <MailIcon className="h-4 w-4" />
+            {contact.email}
             <ArrowIcon className="h-4 w-4 transition-transform rtl:rotate-180 group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5" />
           </a>
+
+          {contact.whatsapp && (
+            <a
+              href={`https://wa.me/${contact.whatsapp}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={contact.whatsappLabel}
+              className="inline-flex h-12 items-center gap-2 rounded-full border border-border bg-background px-6 text-sm font-semibold shadow-sm transition-all hover:-translate-y-0.5 hover:bg-muted hover:shadow-lg active:scale-95"
+              dir="ltr"
+            >
+              <WhatsAppIcon className="h-4 w-4" />
+              {contact.whatsappDisplay}
+            </a>
+          )}
+
           <a
             href={resume.href}
             download={resume.downloadName}
@@ -40,6 +59,25 @@ export function Hero({
           >
             {hero.ctaSecondary}
           </a>
+        </div>
+
+        <div className="mt-6 flex flex-wrap items-center gap-3">
+          <p className="text-xs text-muted-foreground">{contact.location}</p>
+          {contact.socials.length > 0 && (
+            <div className="flex items-center gap-2">
+              {contact.socials.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full border border-border px-3 py-1 text-xs font-medium transition-colors hover:bg-muted"
+                >
+                  {social.label}
+                </a>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </section>

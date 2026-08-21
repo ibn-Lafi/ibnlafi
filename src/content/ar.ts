@@ -16,7 +16,6 @@ export const ar: PortfolioContent = {
     greeting: "مرحباً، أنا",
     name: "علي الحسناني",
     role: "إدارة وتطوير المنتجات والعلامات التجارية",
-    ctaPrimary: "تواصل معي",
     ctaSecondary: "تحميل السيرة الذاتية",
   },
   resume: {
@@ -154,8 +153,6 @@ export const ar: PortfolioContent = {
     ],
   },
   contact: {
-    title: "تواصل معي",
-    subtitle: "يسعدني التواصل معك في أي وقت",
     email: "aloos909@gmail.com",
     emailLabel: "البريد الإلكتروني",
     whatsapp: "966550772934",
