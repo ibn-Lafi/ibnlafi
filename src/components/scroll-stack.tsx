@@ -9,9 +9,7 @@ const MIN_HOLD = 100;
 const MAX_HOLD = 280;
 
 const ENTER_OFFSET = 28;
-const RECEDE_OFFSET = -20;
 const ENTER_SCALE_FROM = 0.94;
-const RECEDE_SCALE_TO = 0.94;
 
 function clamp(value: number, min = 0, max = 1) {
   return Math.min(max, Math.max(min, value));
@@ -96,13 +94,11 @@ export function ScrollStack({ children }: { children: ReactNode }) {
             : m.overflow > 0
               ? 1
               : 0;
-        const recedeProgress =
-          m.revealFraction < 1
-            ? clamp((progress - m.revealFraction) / (1 - m.revealFraction))
-            : 0;
 
         content.style.transform = `translate3d(0, ${(-m.overflow * revealProgress).toFixed(2)}px, 0)`;
 
+        // Once a section has fully entered, it stays completely still —
+        // no fade, scale or drift — until the next one rises to cover it.
         const enterProgress = i > 0 ? progressFor(i - 1) : 1;
         const prevReveal = i > 0 ? metrics[i - 1].revealFraction : 0;
         const settledEnter =
@@ -112,12 +108,8 @@ export function ScrollStack({ children }: { children: ReactNode }) {
               ? clamp((enterProgress - prevReveal) / (1 - prevReveal))
               : 1;
 
-        const translateY =
-          ENTER_OFFSET * (1 - settledEnter) + RECEDE_OFFSET * recedeProgress;
-        const scale =
-          1 -
-          (1 - ENTER_SCALE_FROM) * (1 - settledEnter) -
-          (1 - RECEDE_SCALE_TO) * recedeProgress;
+        const translateY = ENTER_OFFSET * (1 - settledEnter);
+        const scale = 1 - (1 - ENTER_SCALE_FROM) * (1 - settledEnter);
 
         win.style.transform = `translate3d(0, ${translateY.toFixed(2)}px, 0) scale(${scale.toFixed(4)})`;
         win.style.opacity = settledEnter.toFixed(3);
