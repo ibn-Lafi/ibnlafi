@@ -16,11 +16,6 @@ export const en: PortfolioContent = {
     greeting: "Hi, I'm",
     name: "Ali Al-Hasnani",
     role: "Product & Brand Management",
-    ctaSecondary: "Download CV",
-  },
-  resume: {
-    href: "/cv.pdf",
-    downloadName: "Ali-Al-Hasnani-CV.pdf",
   },
   about: {
     title: "About Me",
@@ -158,3 +153,4 @@ export const en: PortfolioContent = {
     socials: [],
   },
 };
+

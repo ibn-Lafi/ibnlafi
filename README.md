@@ -84,7 +84,5 @@ No environment variables are required for a default deployment.
   social links).
 - Update `metadataBase` in `src/app/[locale]/layout.tsx` to the real
   production domain (used for absolute Open Graph URLs).
-- The "Download CV" button currently links to the About section as a
-  placeholder — point it at a real PDF once one exists (e.g. `/cv.pdf` in
-  `public/`), and add it to `img-src`/`default-src` in `src/proxy.ts` if it's
-  served from a different origin.
+
+

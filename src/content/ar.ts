@@ -16,14 +16,6 @@ export const ar: PortfolioContent = {
     greeting: "مرحباً، أنا",
     name: "علي الحسناني",
     role: "إدارة وتطوير المنتجات والعلامات التجارية",
-    ctaSecondary: "السيرة الذاتية",
-  },
-  resume: {
-    href: "/cv.pdf",
-    // Kept ASCII-only: Chromium silently drops the `download` attribute's
-    // suggested filename (falls back to a bare "download") for non-ASCII
-    // values, so a Unicode file name here would break the save-as prompt.
-    downloadName: "Ali-Al-Hasnani-CV.pdf",
   },
   about: {
     title: "نبذة عني",
@@ -162,3 +154,4 @@ export const ar: PortfolioContent = {
     socials: [],
   },
 };
+

@@ -9,12 +9,6 @@ export interface HeroContent {
   greeting: string;
   name: string;
   role: string;
-  ctaSecondary: string;
-}
-
-export interface ResumeContent {
-  href: string;
-  downloadName: string;
 }
 
 export interface AboutContent {
@@ -105,7 +99,6 @@ export interface PortfolioContent {
   meta: SiteMeta;
   nav: NavContent;
   hero: HeroContent;
-  resume: ResumeContent;
   about: AboutContent;
   experience: ExperienceContent;
   skills: SkillsContent;
@@ -114,3 +107,4 @@ export interface PortfolioContent {
   courses: CoursesContent;
   contact: ContactContent;
 }
+
