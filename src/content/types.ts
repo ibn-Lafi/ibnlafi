@@ -16,20 +16,6 @@ export interface AboutContent {
   paragraphs: string[];
 }
 
-export interface ExperienceItem {
-  role: string;
-  organization: string;
-  period: string;
-  location: string;
-  description: string[];
-}
-
-export interface ExperienceContent {
-  title: string;
-  subtitle: string;
-  items: ExperienceItem[];
-}
-
 export interface SkillGroup {
   category: string;
   items: string[];
@@ -100,7 +86,6 @@ export interface PortfolioContent {
   nav: NavContent;
   hero: HeroContent;
   about: AboutContent;
-  experience: ExperienceContent;
   skills: SkillsContent;
   achievements: AchievementsContent;
   education: EducationContent;

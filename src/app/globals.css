@@ -126,24 +126,6 @@ h1 { font-size: clamp(36px, 4.5vw, 60px); font-weight: 700; line-height: 1.35; m
 .project-wordmark { font-size: 36px; font-weight: 700; }
 .project-body { padding: 24px; }
 .project-body h3 { font-size: 22px; font-weight: 700; margin-top: 6px; }
-.experience-layout { display: grid; grid-template-columns: 1.6fr 1fr; gap: 40px; }
-.experience-item { border-bottom: 1px solid var(--border); }
-.experience-item summary { display: flex; gap: 16px; padding-block: 22px; cursor: pointer; list-style: none; align-items: center; }
-.experience-item summary::-webkit-details-marker { display: none; }
-.experience-mark { width: 68px; height: 54px; display: flex; align-items: center; justify-content: center; border: 1px solid #e5e5e5; border-radius: 9px; background: white; color: black; flex-shrink: 0; font-size: 13px; padding: 6px; }
-.experience-mark img { object-fit: contain; }
-.experience-summary { display: flex; flex-direction: column; gap: 5px; flex: 1; }
-.experience-summary strong { font-size: 16px; font-weight: 500; }
-.experience-summary span,.experience-summary small { font-size: 12px; color: var(--muted-foreground); }
-.expand-icon { font-size: 22px; color: var(--highlight); }
-.experience-item[open] .expand-icon { transform: rotate(45deg); }
-.experience-item ul { padding-inline-start: 24px; padding-bottom: 22px; color: var(--muted-foreground); font-size: 14px; line-height: 1.9; list-style: disc; }
-.skills-panel { padding: 28px; background: var(--muted); border-radius: 18px; align-self: start; }
-.skills-panel h3 { font-size: 18px; font-weight: 500; }
-.skills-panel ul { display: flex; gap: 10px; flex-wrap: wrap; margin-block: 20px; }
-.skills-panel li { font-size: 12px; padding: 6px 10px; border: 1px solid var(--border); border-radius: 6px; }
-.education-note { border-top: 1px solid var(--border); padding-top: 20px; font-size: 13px; line-height: 1.9; }
-.education-note span { color: var(--muted-foreground); font-size: 12px; }
 .contact { display: flex; justify-content: space-between; align-items: center; gap: 24px; background: var(--muted); border-radius: 22px; padding: 40px; margin-block: 12px 42px; scroll-margin-top: 24px; }
 .contact h2 { font-size: 30px; font-weight: 700; margin-block: 12px 8px; }
 .contact p:not(.section-label) { color: var(--muted-foreground); font-size: 14px; }
@@ -161,7 +143,6 @@ h1 { font-size: clamp(36px, 4.5vw, 60px); font-weight: 700; line-height: 1.35; m
  .project-grid { grid-template-columns: 1fr; }
  .project-card { display: grid; grid-template-columns: 190px minmax(0,1fr); }
  .project-card .brand-stage { border-bottom: 0; }
- .experience-layout { grid-template-columns: 1fr; gap: 24px; }
  .contact { align-items: flex-start; flex-direction: column; }
 }
 @media (max-width: 580px) {
@@ -184,9 +165,6 @@ h1 { font-size: clamp(36px, 4.5vw, 60px); font-weight: 700; line-height: 1.35; m
  .featured-copy h3 { margin-top: 12px; }
  .project-card { display: block; }
  .project-card .brand-stage { min-height: 140px; border-bottom: 1px solid #e5e5e5; }
- .experience-item summary { gap: 12px; }
- .experience-mark { width: 54px; height: 48px; }
- .experience-summary strong { font-size: 14px; }
  .contact { padding: 24px; margin-bottom: 28px; }
  .contact h2 { font-size: 26px; }
  .contact-links { width: 100%; }
