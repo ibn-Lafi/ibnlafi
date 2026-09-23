@@ -143,7 +143,7 @@ h1 { font-size: clamp(36px, 4.5vw, 60px); font-weight: 700; line-height: 1.35; m
 
 /* Shared compact project cards and social controls. */
 .wordmark { display: inline-flex; align-items: center; gap: 10px; }
-.wordmark img { border-radius: 50%; width: 44px; height: 44px; object-fit: cover; }
+.wordmark img { width: 44px; height: 44px; object-fit: contain; }
 .wordmark .wordmark-name { color: var(--foreground); }
 .profile-avatar { width: 100%; height: auto; border-radius: 18px; margin-bottom: 20px; }
 .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
