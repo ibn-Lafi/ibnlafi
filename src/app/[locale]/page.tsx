@@ -46,7 +46,7 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
     <div className="portfolio">
       <a className="skip-link" href="#main">{copy.skip}</a>
       <header className="site-header">
-        <a className="wordmark" href={`/${locale}`} aria-label={hero.name}><Image src="/brand-avatar.jpeg" alt="" width={44} height={44} priority /><span className="wordmark-name">ibnlafi<span aria-hidden="true">.</span></span></a>
+        <a className="wordmark" href={`/${locale}`} aria-label={hero.name}><Image src="/brand-avatar.jpeg" alt="" width={44} height={44} priority /></a>
         <nav className="section-nav" aria-label={ar ? "أقسام الصفحة" : "Page sections"}><a href="#work">{copy.work}</a></nav>
         <div className="preferences"><LanguageToggle targetLocale={ar ? "en" : "ar"} label={nav.languageToggle} /><ThemeToggle label={nav.themeToggle.toggle} /></div>
       </header>
