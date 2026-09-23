@@ -3,25 +3,25 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #faf9f6;
-  --foreground: #232823;
-  --muted: #f4f4f5;
-  --muted-foreground: #52525b;
-  --border: #e4e4e7;
-  --accent: #0a0a0a;
-  --accent-foreground: #ffffff;
+  --background: #ffffff;
+  --foreground: #000000;
+  --muted: #f5f5f5;
+  --muted-foreground: #525252;
+  --border: #e5e5e5;
+  --accent: #EA393C;
+  --accent-foreground: #000000;
   --surface: #ffffff;
 }
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #fafafa;
-  --muted: #18181b;
-  --muted-foreground: #a1a1aa;
-  --border: #27272a;
-  --accent: #ffffff;
-  --accent-foreground: #0a0a0a;
-  --surface: #111113;
+  --background: #000000;
+  --foreground: #ffffff;
+  --muted: #181818;
+  --muted-foreground: #a3a3a3;
+  --border: #292929;
+  --accent: #EA393C;
+  --accent-foreground: #000000;
+  --surface: #111111;
 }
 
 @theme inline {
@@ -66,13 +66,13 @@ html[lang="ar"] * {
 }
 
 ::selection {
-  background: var(--foreground);
-  color: var(--background);
+  background: var(--accent);
+  color: var(--accent-foreground);
 }
 
 
-:root { --highlight: #49634d; }
-.dark { --highlight: #b6ceb4; }
+:root { --highlight: #EA393C; }
+.dark { --highlight: #EA393C; }
 :focus-visible { outline: 2px solid var(--highlight); outline-offset: 5px; }
 .portfolio { width: min(100% - 48px, 760px); margin-inline: auto; }
 .site-header { display: flex; align-items: center; justify-content: space-between; padding-block: 28px; }
@@ -85,7 +85,8 @@ html[lang="ar"] * {
 .eyebrow, .section-label { color: var(--muted-foreground); font-size: 14px; font-weight: 500; }
 h1 { font-size: clamp(36px, 6vw, 58px); font-weight: 700; line-height: 1.35; margin-block: 10px 18px; letter-spacing: -2px; }
 .intro-copy { color: var(--muted-foreground); font-size: 19px; line-height: 1.85; max-width: 550px; }
-.text-link { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; margin-top: 18px; font-size: 15px; font-weight: 700; color: var(--highlight); }
+.text-link { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; margin-top: 18px; font-size: 15px; font-weight: 700; color: var(--foreground); }
+.text-link span { color: var(--highlight); }
 .text-link:hover { text-decoration: underline; text-underline-offset: 6px; }
 .work { border-top: 1px solid var(--border); padding-top: 24px; }
 .work-list { margin-top: 12px; }
@@ -93,7 +94,7 @@ h1 { font-size: clamp(36px, 6vw, 58px); font-weight: 700; line-height: 1.35; mar
 .work-number { direction: ltr; font-size: 12px; padding-top: 5px; color: var(--muted-foreground); font-variant-numeric: tabular-nums; }
 .work-title { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; }
 .work-title h3 { font-size: 19px; font-weight: 700; }
-.work-title span { color: var(--highlight); font-size: 12px; }
+.work-title span { color: var(--muted-foreground); font-size: 12px; }
 .work-row p { color: var(--muted-foreground); font-size: 15px; line-height: 1.8; margin-top: 6px; max-width: 590px; }
 .contact { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 36px; scroll-margin-top: 24px; }
 .contact h2 { font-size: 22px; font-weight: 700; }
@@ -101,8 +102,8 @@ h1 { font-size: clamp(36px, 6vw, 58px); font-weight: 700; line-height: 1.35; mar
 .contact-links { display: flex; flex-wrap: wrap; gap: 8px; }
 .contact-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 10px 18px; border: 1px solid var(--border); border-radius: 10px; font-size: 14px; font-weight: 500; transition: background .15s; }
 .contact-button:hover { background: var(--muted); }
-.contact-button.primary { background: var(--foreground); color: var(--background); border-color: var(--foreground); }
-.contact-button.primary:hover { opacity: .85; }
+.contact-button.primary { background: var(--accent); color: var(--accent-foreground); border-color: var(--accent); }
+.contact-button.primary:hover { box-shadow: inset 0 0 0 2px #000000; }
 .site-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; border-top: 1px solid var(--border); padding-block: 20px 28px; font-size: 12px; color: var(--muted-foreground); }
 .skip-link { position: fixed; top: -100px; padding: 12px; background: var(--background); z-index: 100; }
 .skip-link:focus { top: 12px; }
