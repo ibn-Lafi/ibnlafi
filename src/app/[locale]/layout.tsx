@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Tajawal } from "next/font/google";
+import localFont from "next/font/local";
 import { notFound } from "next/navigation";
 import { headers } from "next/headers";
 import "../globals.css";
@@ -7,16 +7,13 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { locales, localeDirection, isLocale } from "@/i18n/config";
 import { getContent } from "@/content";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const tajawal = Tajawal({
-  variable: "--font-tajawal",
-  subsets: ["arabic"],
-  weight: ["300", "400", "500", "700", "900"],
+const thmanyah = localFont({
+  src: [
+    { path: "../fonts/thmanyahsans-Regular.woff2", weight: "400", style: "normal" },
+    { path: "../fonts/thmanyahsans-Medium.woff2", weight: "500", style: "normal" },
+    { path: "../fonts/thmanyahsans-Bold.woff2", weight: "700", style: "normal" },
+  ],
+  variable: "--font-thmanyah",
   display: "swap",
 });
 
@@ -71,7 +68,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={localeDirection[locale]}
-      className={`${inter.variable} ${tajawal.variable} h-full antialiased`}
+      className={`${thmanyah.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
