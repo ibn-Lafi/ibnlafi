@@ -69,10 +69,6 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
         <div className="header-actions"><div className="preferences"><LanguageToggle targetLocale={ar ? "en" : "ar"} label={nav.languageToggle} /><ThemeToggle label={nav.themeToggle.toggle} /></div></div>
       </header>
       <main id="main">
-        <section className="intro" aria-labelledby="intro-title">
-          <div className="hero-copy"><p className="eyebrow"><span className="red-dot" />{copy.eyebrow}</p><h1 id="intro-title">{copy.intro}</h1><p className="intro-copy">{copy.bio}</p><div className="hero-actions"><a className="contact-button primary" href="#work">{copy.work}<span aria-hidden="true">↓</span></a><a className="text-link" href="#contact">{copy.contact}<span aria-hidden="true">↗</span></a></div></div>
-          <aside className="profile-note"><Image className="profile-avatar" src="/brand-avatar.jpeg" alt={hero.name} width={180} height={180} /><p>{hero.name}</p><span>{copy.location}</span><div className="profile-line" /><p className="profile-caption">{hero.role}</p></aside>
-        </section>
         <section id="about" className="page-section about-section" aria-labelledby="about-title"><div className="about-card"><span className="about-mark" aria-hidden="true">{ar ? "عني" : "About"}</span><h2 id="about-title">{copy.aboutLead}</h2><div className="about-copy"><p>{copy.aboutBody}</p><p>{copy.aboutBody2}</p></div></div></section>
         <section id="interests" className="page-section interests-section" aria-labelledby="interests-title"><div className="section-heading"><div><p className="section-label">01 / {copy.interests}</p><h2 id="interests-title">{copy.interests}</h2></div><p>{copy.interestsNote}</p></div><div className="interest-list">{copy.interestItems.map((item)=><div className="interest-item" key={item.title}><span className="interest-icon" aria-hidden="true">{item.icon}</span><span>{item.title}</span></div>)}</div></section>
         <section id="work" className="page-section" aria-labelledby="work-title">
