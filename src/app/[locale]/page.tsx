@@ -62,7 +62,7 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
       <header className="site-header">
         <a className="wordmark" href={`/${locale}`} aria-label={hero.name}><Image src="/header-logo.svg" alt="" width={44} height={44} priority /></a>
         <nav className="section-nav" aria-label={ar ? "أقسام الصفحة" : "Page sections"}><a href="#interests">{copy.interests}</a><a href="#work">{copy.work}</a><a href="#services">{copy.services}</a></nav>
-        <div className="header-actions"><div className="header-socials"><SocialLinks arabic={ar} /><a className="social-link" href={`mailto:${contact.email}`} aria-label={ar ? "البريد الإلكتروني" : "Email"} title={ar ? "البريد الإلكتروني" : "Email"}><MailIcon className="h-5 w-5" /></a></div><div className="preferences"><LanguageToggle targetLocale={ar ? "en" : "ar"} label={nav.languageToggle} /><ThemeToggle label={nav.themeToggle.toggle} /></div></div>
+        <div className="header-actions"><div className="preferences"><LanguageToggle targetLocale={ar ? "en" : "ar"} label={nav.languageToggle} /><ThemeToggle label={nav.themeToggle.toggle} /></div></div>
       </header>
       <main id="main">
         <section className="intro" aria-labelledby="intro-title">
@@ -90,7 +90,7 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
         </section>
         <section id="services" className="page-section services-section" aria-labelledby="services-title"><div className="section-heading"><div><p className="section-label">03 / {copy.services}</p><h2 id="services-title">{copy.servicesTitle}</h2></div><p>{copy.servicesNote}</p></div><div className="service-stack">{copy.serviceItems.map((service,index)=><article className="service-card" key={service.title} style={{"--service-index": index} as React.CSSProperties}><span className="service-number">0{index+1}</span><div><h3>{service.title}</h3><p>{service.description}</p><div className="service-tags">{service.tags.map(tag=><span key={tag}>{tag}</span>)}</div></div></article>)}</div></section>
       </main>
-      <footer className="site-footer"><span>{hero.name}</span><span>{copy.location}</span></footer>
+      <footer className="site-footer"><div className="footer-socials"><SocialLinks arabic={ar} /><a className="social-link" href={`mailto:${contact.email}`} aria-label={ar ? "البريد الإلكتروني" : "Email"} title={ar ? "البريد الإلكتروني" : "Email"}><MailIcon className="h-5 w-5" /></a></div></footer>
     </div>
   );
 }
