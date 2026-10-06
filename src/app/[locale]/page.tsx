@@ -73,18 +73,13 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
         <section id="about" className="page-section about-section" aria-labelledby="about-title"><div className="about-card"><span className="about-mark" aria-hidden="true">{ar ? "عني" : "About"}</span><h2 id="about-title">{copy.aboutLead}</h2><div className="about-copy"><p>{copy.aboutBody}</p><p>{copy.aboutBody2}</p></div></div></section>
         <section id="work" className="page-section" aria-labelledby="work-title">
           <div className="section-heading"><div><p className="section-label">02 / {copy.work}</p><h2 id="work-title">{copy.selected}</h2></div><p>{copy.selectedNote}</p></div>
-          <div className="project-grid">
+          <div className="work-list">
             {[{ name: copy.sbaah, category: copy.category, logo: "/brands/sbaah.svg", description: copy.sbaahDescription, href: "https://sbaah.com" }, ...copy.projects.map(project => ({ ...project, href: "" }))].map((project, index) => (
-              <article className="project-card" key={project.name}>
-                <div className="brand-stage">
-                  {project.logo ? <Image src={project.logo} alt={ar ? `شعار ${project.name}` : `${project.name} logo`} width={250} height={100} sizes="(max-width: 580px) 140px, 220px" /> : <span className="project-wordmark">{project.name}</span>}
-                  <span className="project-index" aria-hidden="true">0{index + 1}</span>
+              <article className="work-item" key={project.name}>
+                <div className="work-visual">
+                  {project.logo ? <Image src={project.logo} alt={ar ? `شعار ${project.name}` : `${project.name} logo`} width={250} height={100} sizes="(max-width: 580px) 160px, 250px" /> : <span className="project-wordmark">{project.name}</span>}
                 </div>
-                <div className="project-body">
-                  <p className="project-category">{project.category}</p><h3>{project.name}</h3>
-                  <p className="project-description">{project.description}</p>
-                  {project.href && <a href={project.href} target="_blank" rel="noopener noreferrer" className="text-link">{copy.visit}<span aria-hidden="true">↗</span></a>}
-                </div>
+                <div className="work-meta"><h3>{project.name}</h3><p>{project.category}</p></div>
               </article>
             ))}
           </div>
