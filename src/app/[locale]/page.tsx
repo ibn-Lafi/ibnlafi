@@ -13,32 +13,46 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
   const { hero, contact, nav } = getContent(locale);
   const ar = locale === "ar";
   const copy = ar ? {
-    skip: "انتقل إلى المحتوى", work: "أعمال ومشاريع", contact: "لنتواصل",
-    eyebrow: "الأعمال · المنتجات · العلامات التجارية",
+    skip: "انتقل إلى المحتوى", work: "ملف الأعمال", contact: "لنتواصل",
+    eyebrow: "AI · Business · E-commerce",
     intro: "أطوّر الأفكار إلى منتجات وعلامات تجارية.",
     bio: "أنا علي الحسناني. أعمل في تطوير الأعمال والمنتجات وبناء العلامات التجارية، مع اهتمام بالتقنية العقارية والذكاء الاصطناعي.",
-    selected: "من الفكرة إلى التجربة", selectedNote: "مجموعة من المشاريع التي عملت على بنائها وتطويرها.",
+    selected: "ملف الأعمال", selectedNote: "مشاريع ومنتجات وعلامات شاركت في بنائها وتطويرها.",
+    interests: "الاهتمامات", interestsNote: "المجالات التي أركز عليها وأتابعها باستمرار.",
+    services: "الخدمات", servicesTitle: "خدمات مصممة لتناسب احتياجك", servicesNote: "حلول عملية لبناء وتطوير الأعمال والحضور الرقمي.",
+    serviceItems: [
+      { title: "تطوير الأعمال", description: "تحليل الفرص، تطوير نماذج الأعمال، وبناء خطط نمو قابلة للتنفيذ." },
+      { title: "تصميم وإدارة المتاجر الإلكترونية", description: "تصميم وتشغيل وتطوير المتاجر الإلكترونية مع التركيز على تجربة العميل والنمو." },
+      { title: "برمجة المواقع", description: "بناء مواقع حديثة وسريعة ومتجاوبة تخدم العلامة التجارية وأهداف العمل." },
+    ],
     featured: "مشروع أعمل على بنائه", sbaah: "سبعة", category: "منصة للتقنية العقارية",
     sbaahDescription: "منصة تمكّن المطورين والمسوقين والوسطاء العقاريين من إنشاء مواقعهم العقارية وإدارة العقارات والعملاء والفرص البيعية من مكان واحد.",
     features: ["مواقع عقارية", "إدارة العقارات", "إدارة علاقات العملاء"], visit: "اكتشف سبعة",
     projects: [
       { name: "دولسيور", category: "تطوير علامة تجارية", logo: "/brands/dulceur.png", description: "تطوير مؤسسة بنان السعادة من محل حلويات تقليدي إلى علامة تجارية، مع تأسيس معمل إنتاج ومنظومة تشغيل." },
       { name: "غلوردا", category: "تطوير منتج رقمي", logo: "/brands/glorda.svg", description: "تطبيق يجمع الهدايا والورود والكيك والحلويات، شاركت به في برنامج مسك لانشباد 9.0 مع مؤسسة الأمير محمد بن سلمان." },
-      { name: "مَعين", category: "الذكاء الاصطناعي", logo: "", description: "وكيل ذكاء اصطناعي للحجز والإرشاد في مكة والمدينة، طوّرته ضمن هاكاثون جادة ثون." },
+      { name: "ڤينت", category: "تجارة إلكترونية", logo: "", description: "علامة ومتجر إلكتروني للمنتجات الموسمية، عملت على بنائه وتطوير تجربته التجارية." },
     ],
     contactTitle: "عندك فكرة؟ لنتحدث.", note: "يسعدني التواصل حول المشاريع وفرص العمل.", location: "مكة المكرمة، السعودية", details: "التفاصيل",
   } : {
-    skip: "Skip to content", work: "Selected work", contact: "Let’s connect",
-    eyebrow: "Business · Products · Brands", intro: "Turning ideas into products and brands.",
+    skip: "Skip to content", work: "Portfolio", contact: "Let’s connect",
+    eyebrow: "AI · Business · E-commerce", intro: "Turning ideas into products and brands.",
     bio: "I’m Ali Alhasnani. I work across business development, products and brands, with an interest in PropTech and artificial intelligence.",
-    selected: "From idea to experience", selectedNote: "A selection of projects I have built and developed.",
+    selected: "Portfolio", selectedNote: "Projects, products and brands I have helped build and develop.",
+    interests: "Interests", interestsNote: "The areas I focus on and continuously explore.",
+    services: "Services", servicesTitle: "Services built around what you need", servicesNote: "Practical solutions for business growth and digital presence.",
+    serviceItems: [
+      { title: "Business Development", description: "Opportunity analysis, business model development, and actionable growth plans." },
+      { title: "E-commerce Design & Management", description: "Designing, operating and improving online stores with a focus on customer experience and growth." },
+      { title: "Web Development", description: "Building modern, fast and responsive websites aligned with brand and business goals." },
+    ],
     featured: "A project I’m building", sbaah: "Sbaah", category: "A real estate technology platform",
     sbaahDescription: "A platform that helps real estate developers, marketers and brokers create their own property websites and manage properties, customers and sales opportunities in one place.",
     features: ["Property websites", "Property management", "Customer relationships"], visit: "Explore Sbaah",
     projects: [
       { name: "Dulcior", category: "Brand development", logo: "/brands/dulceur.png", description: "Developed Benan Al-Saada from a traditional confectionery shop into a brand with its own production facility and operations." },
       { name: "Glorda", category: "Digital product", logo: "/brands/glorda.svg", description: "An app bringing together gifts, flowers, cakes and sweets, with which I participated in Misk Launchpad 9.0 at the Prince Mohammed bin Salman Foundation." },
-      { name: "Maeen", category: "Artificial intelligence", logo: "", description: "An AI agent for bookings and guidance in Makkah and Madinah, developed during the JadaThon hackathon." },
+      { name: "VENT", category: "E-commerce", logo: "", description: "A seasonal-products e-commerce brand and store that I helped build and develop." },
     ],
     contactTitle: "Have an idea? Let’s talk.", note: "Open to conversations about projects and work opportunities.", location: "Makkah, Saudi Arabia", details: "Details",
   };
@@ -47,7 +61,7 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
       <a className="skip-link" href="#main">{copy.skip}</a>
       <header className="site-header">
         <a className="wordmark" href={`/${locale}`} aria-label={hero.name}><Image src="/header-logo.svg" alt="" width={44} height={44} priority /></a>
-        <nav className="section-nav" aria-label={ar ? "أقسام الصفحة" : "Page sections"}><a href="#work">{copy.work}</a></nav>
+        <nav className="section-nav" aria-label={ar ? "أقسام الصفحة" : "Page sections"}><a href="#interests">{copy.interests}</a><a href="#work">{copy.work}</a><a href="#services">{copy.services}</a></nav>
         <div className="preferences"><LanguageToggle targetLocale={ar ? "en" : "ar"} label={nav.languageToggle} /><ThemeToggle label={nav.themeToggle.toggle} /></div>
       </header>
       <main id="main">
@@ -55,8 +69,9 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
           <div className="hero-copy"><p className="eyebrow"><span className="red-dot" />{copy.eyebrow}</p><h1 id="intro-title">{copy.intro}</h1><p className="intro-copy">{copy.bio}</p><div className="hero-actions"><a className="contact-button primary" href="#work">{copy.work}<span aria-hidden="true">↓</span></a><a className="text-link" href="#contact">{copy.contact}<span aria-hidden="true">↗</span></a></div></div>
           <aside className="profile-note"><Image className="profile-avatar" src="/brand-avatar.jpeg" alt={hero.name} width={180} height={180} /><p>{hero.name}</p><span>{copy.location}</span><div className="profile-line" /><p className="profile-caption">{hero.role}</p></aside>
         </section>
+        <section id="interests" className="page-section interests-section" aria-labelledby="interests-title"><div className="section-heading"><div><p className="section-label">01 / {copy.interests}</p><h2 id="interests-title">{copy.interests}</h2></div><p>{copy.interestsNote}</p></div><div className="interest-grid">{["AI","Business","E-commerce"].map((item, index)=><article className="interest-card" key={item}><span>0{index+1}</span><h3>{item}</h3></article>)}</div></section>
         <section id="work" className="page-section" aria-labelledby="work-title">
-          <div className="section-heading"><div><p className="section-label">01 / {copy.work}</p><h2 id="work-title">{copy.selected}</h2></div><p>{copy.selectedNote}</p></div>
+          <div className="section-heading"><div><p className="section-label">02 / {copy.work}</p><h2 id="work-title">{copy.selected}</h2></div><p>{copy.selectedNote}</p></div>
           <div className="project-grid">
             {[{ name: copy.sbaah, category: copy.category, logo: "/brands/sbaah.svg", description: copy.sbaahDescription, href: "https://sbaah.com" }, ...copy.projects.map(project => ({ ...project, href: "" }))].map((project, index) => (
               <article className="project-card" key={project.name}>
@@ -73,7 +88,8 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
             ))}
           </div>
         </section>
-        <section id="contact" className="contact" aria-labelledby="contact-title"><div><p className="section-label">02 / {copy.contact}</p><h2 id="contact-title">{copy.contactTitle}</h2><p>{copy.note}</p></div><div className="contact-links"><a className="contact-button primary" href={`mailto:${contact.email}`}><MailIcon className="h-4 w-4" />{contact.emailLabel}</a><SocialLinks arabic={ar} /></div></section>
+        <section id="services" className="page-section services-section" aria-labelledby="services-title"><div className="section-heading"><div><p className="section-label">03 / {copy.services}</p><h2 id="services-title">{copy.servicesTitle}</h2></div><p>{copy.servicesNote}</p></div><div className="service-stack">{copy.serviceItems.map((service,index)=><article className="service-card" key={service.title} style={{"--service-index": index} as React.CSSProperties}><span className="service-number">0{index+1}</span><div><h3>{service.title}</h3><p>{service.description}</p></div></article>)}</div></section>
+        <section id="contact" className="contact" aria-labelledby="contact-title"><div><p className="section-label">04 / {copy.contact}</p><h2 id="contact-title">{copy.contactTitle}</h2><p>{copy.note}</p></div><div className="contact-links"><a className="contact-button primary" href={`mailto:${contact.email}`}><MailIcon className="h-4 w-4" />{contact.emailLabel}</a><SocialLinks arabic={ar} /></div></section>
       </main>
       <footer className="site-footer"><span>{hero.name}</span><span>{copy.location}</span></footer>
     </div>
