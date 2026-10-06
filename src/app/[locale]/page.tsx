@@ -32,7 +32,7 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
     features: ["مواقع عقارية", "إدارة العقارات", "إدارة علاقات العملاء"], visit: "اكتشف سبعة",
     projects: [
       { name: "دولسيور", category: "تطوير وبناء علامة تجارية", logo: "/brands/dulceur.png", description: "تطوير مؤسسة بنان السعادة من محل حلويات تقليدي إلى علامة تجارية، مع تأسيس معمل إنتاج ومنظومة تشغيل." },
-      { name: "غلوردا", category: "تطبيق Marketplace للهدايا والورود", logo: "/brands/glorda.svg", description: "تطبيق يجمع الهدايا والورود والكيك والحلويات، شاركت به في برنامج مسك لانشباد 9.0 مع مؤسسة الأمير محمد بن سلمان." },
+      { name: "غلوردا", category: "تطبيق Marketplace للهدايا والورود", logo: "/7DFF1698-A497-4BD0-AE76-1F9DD9B98CC4.jpg", description: "تطبيق يجمع الهدايا والورود والكيك والحلويات، شاركت به في برنامج مسك لانشباد 9.0 مع مؤسسة الأمير محمد بن سلمان." },
       { name: "ڤينت", category: "علامة ومتجر إلكتروني", logo: "", description: "علامة ومتجر إلكتروني للمنتجات الموسمية، عملت على بنائه وتطوير تجربته التجارية." },
     ],
     contactTitle: "عندك فكرة؟ لنتحدث.", note: "يسعدني التواصل حول المشاريع وفرص العمل.", location: "مكة المكرمة، السعودية", details: "التفاصيل",
@@ -55,7 +55,7 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
     features: ["Property websites", "Property management", "Customer relationships"], visit: "Explore Sbaah",
     projects: [
       { name: "Dulcior", category: "Brand building & development", logo: "/brands/dulceur.png", description: "Developed Benan Al-Saada from a traditional confectionery shop into a brand with its own production facility and operations." },
-      { name: "Glorda", category: "Gifts & flowers marketplace app", logo: "/brands/glorda.svg", description: "An app bringing together gifts, flowers, cakes and sweets, with which I participated in Misk Launchpad 9.0 at the Prince Mohammed bin Salman Foundation." },
+      { name: "Glorda", category: "Gifts & flowers marketplace app", logo: "/7DFF1698-A497-4BD0-AE76-1F9DD9B98CC4.jpg", description: "An app bringing together gifts, flowers, cakes and sweets, with which I participated in Misk Launchpad 9.0 at the Prince Mohammed bin Salman Foundation." },
       { name: "VENT", category: "E-commerce brand & store", logo: "", description: "A seasonal-products e-commerce brand and store that I helped build and develop." },
     ],
     contactTitle: "Have an idea? Let’s talk.", note: "Open to conversations about projects and work opportunities.", location: "Makkah, Saudi Arabia", details: "Details",
