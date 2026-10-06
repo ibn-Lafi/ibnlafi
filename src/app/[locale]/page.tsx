@@ -69,8 +69,8 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
         <div className="header-actions"><div className="preferences"><LanguageToggle targetLocale={ar ? "en" : "ar"} label={nav.languageToggle} /><ThemeToggle label={nav.themeToggle.toggle} /></div></div>
       </header>
       <main id="main">
-        <section id="about" className="page-section about-section" aria-labelledby="about-title"><div className="about-card"><span className="about-mark" aria-hidden="true">{ar ? "عني" : "About"}</span><h2 id="about-title">{copy.aboutLead}</h2><div className="about-copy"><p>{copy.aboutBody}</p><p>{copy.aboutBody2}</p></div></div></section>
         <section id="interests" className="page-section interests-section" aria-labelledby="interests-title"><div className="section-heading"><div><p className="section-label">01 / {copy.interests}</p><h2 id="interests-title">{copy.interests}</h2></div><p>{copy.interestsNote}</p></div><div className="interest-list">{copy.interestItems.map((item)=><div className="interest-item" key={item.title}><span className="interest-icon" aria-hidden="true">{item.icon}</span><span>{item.title}</span></div>)}</div></section>
+        <section id="about" className="page-section about-section" aria-labelledby="about-title"><div className="about-card"><span className="about-mark" aria-hidden="true">{ar ? "عني" : "About"}</span><h2 id="about-title">{copy.aboutLead}</h2><div className="about-copy"><p>{copy.aboutBody}</p><p>{copy.aboutBody2}</p></div></div></section>
         <section id="work" className="page-section" aria-labelledby="work-title">
           <div className="section-heading"><div><p className="section-label">02 / {copy.work}</p><h2 id="work-title">{copy.selected}</h2></div><p>{copy.selectedNote}</p></div>
           <div className="project-grid">
