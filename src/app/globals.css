@@ -196,3 +196,6 @@ h1 { font-size: clamp(36px, 4.5vw, 60px); font-weight: 700; line-height: 1.35; m
 
 /* No divider between header/navigation and About card */
 .site-header{border-bottom:0}
+
+/* Compact interests directly below navigation */
+.interests-section{padding-block:14px 18px;border-top:0}.interests-section .section-heading{display:none}.interest-list{justify-content:center;gap:8px}.interest-item{min-height:38px;padding:6px 12px;border-radius:999px;font-size:13px;font-weight:500;background:transparent}.interest-icon{width:22px;height:22px;font-size:12px}.about-section{padding-top:4px}@media(max-width:580px){.interests-section{padding-block:10px 14px}.interest-list{display:flex;flex-wrap:nowrap;justify-content:center;gap:5px}.interest-item{width:auto;min-height:34px;padding:5px 8px;border-radius:999px;font-size:11px;gap:5px}.interest-icon{width:18px;height:18px;font-size:10px}}
