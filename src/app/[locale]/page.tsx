@@ -18,7 +18,8 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
     intro: "أطوّر الأفكار إلى منتجات وعلامات تجارية.",
     bio: "أنا علي الحسناني. أعمل في تطوير الأعمال والمنتجات وبناء العلامات التجارية، مع اهتمام بالتقنية العقارية والذكاء الاصطناعي.",
     selected: "ملف الأعمال", selectedNote: "مشاريع ومنتجات وعلامات شاركت في بنائها وتطويرها.",
-    interests: "الاهتمامات", interestsNote: "المجالات التي أركز عليها وأتابعها باستمرار.",
+    interests: "الاهتمامات", interestsNote: "مجالات أعمل عليها وأهتم بتطورها.",
+    interestItems: [{ title: "الذكاء الاصطناعي", icon: "✦" }, { title: "الأعمال", icon: "↗" }, { title: "التجارة الإلكترونية", icon: "◫" }],
     services: "الخدمات", servicesTitle: "خدمات مصممة لتناسب احتياجك", servicesNote: "حلول عملية لبناء وتطوير الأعمال والحضور الرقمي.",
     serviceItems: [
       { title: "تطوير الأعمال", description: "أساعد في تحويل الأفكار والفرص إلى أعمال قابلة للنمو، من دراسة السوق ونموذج العمل إلى تطوير العمليات وتجربة العميل وبناء خطط النمو.", tags: ["دراسة السوق", "نماذج الأعمال", "استراتيجية النمو", "تطوير العمليات", "تجربة العميل"] },
@@ -39,7 +40,8 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
     eyebrow: "AI · Business · E-commerce", intro: "Turning ideas into products and brands.",
     bio: "I’m Ali Alhasnani. I work across business development, products and brands, with an interest in PropTech and artificial intelligence.",
     selected: "Portfolio", selectedNote: "Projects, products and brands I have helped build and develop.",
-    interests: "Interests", interestsNote: "The areas I focus on and continuously explore.",
+    interests: "Interests", interestsNote: "Areas I work in and continue to explore.",
+    interestItems: [{ title: "Artificial Intelligence", icon: "✦" }, { title: "Business", icon: "↗" }, { title: "E-commerce", icon: "◫" }],
     services: "Services", servicesTitle: "Services built around what you need", servicesNote: "Practical solutions for business growth and digital presence.",
     serviceItems: [
       { title: "Business Development", description: "Turning ideas and opportunities into scalable businesses, from market research and business models to operations, customer experience and growth planning.", tags: ["Market Research", "Business Models", "Growth Strategy", "Operations", "Customer Experience"] },
@@ -69,7 +71,7 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
           <div className="hero-copy"><p className="eyebrow"><span className="red-dot" />{copy.eyebrow}</p><h1 id="intro-title">{copy.intro}</h1><p className="intro-copy">{copy.bio}</p><div className="hero-actions"><a className="contact-button primary" href="#work">{copy.work}<span aria-hidden="true">↓</span></a><a className="text-link" href="#contact">{copy.contact}<span aria-hidden="true">↗</span></a></div></div>
           <aside className="profile-note"><Image className="profile-avatar" src="/brand-avatar.jpeg" alt={hero.name} width={180} height={180} /><p>{hero.name}</p><span>{copy.location}</span><div className="profile-line" /><p className="profile-caption">{hero.role}</p></aside>
         </section>
-        <section id="interests" className="page-section interests-section" aria-labelledby="interests-title"><div className="section-heading"><div><p className="section-label">01 / {copy.interests}</p><h2 id="interests-title">{copy.interests}</h2></div><p>{copy.interestsNote}</p></div><div className="interest-grid">{["AI","Business","E-commerce"].map((item, index)=><article className="interest-card" key={item}><span>0{index+1}</span><h3>{item}</h3></article>)}</div></section>
+        <section id="interests" className="page-section interests-section" aria-labelledby="interests-title"><div className="section-heading"><div><p className="section-label">01 / {copy.interests}</p><h2 id="interests-title">{copy.interests}</h2></div><p>{copy.interestsNote}</p></div><div className="interest-list">{copy.interestItems.map((item)=><div className="interest-item" key={item.title}><span className="interest-icon" aria-hidden="true">{item.icon}</span><span>{item.title}</span></div>)}</div></section>
         <section id="work" className="page-section" aria-labelledby="work-title">
           <div className="section-heading"><div><p className="section-label">02 / {copy.work}</p><h2 id="work-title">{copy.selected}</h2></div><p>{copy.selectedNote}</p></div>
           <div className="project-grid">
