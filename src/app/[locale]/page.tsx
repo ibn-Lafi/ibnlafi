@@ -21,9 +21,9 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
     interests: "الاهتمامات", interestsNote: "المجالات التي أركز عليها وأتابعها باستمرار.",
     services: "الخدمات", servicesTitle: "خدمات مصممة لتناسب احتياجك", servicesNote: "حلول عملية لبناء وتطوير الأعمال والحضور الرقمي.",
     serviceItems: [
-      { title: "تطوير الأعمال", description: "تحليل الفرص، تطوير نماذج الأعمال، وبناء خطط نمو قابلة للتنفيذ." },
-      { title: "تصميم وإدارة المتاجر الإلكترونية", description: "تصميم وتشغيل وتطوير المتاجر الإلكترونية مع التركيز على تجربة العميل والنمو." },
-      { title: "برمجة المواقع", description: "بناء مواقع حديثة وسريعة ومتجاوبة تخدم العلامة التجارية وأهداف العمل." },
+      { title: "تطوير الأعمال", description: "أساعد في تحويل الأفكار والفرص إلى أعمال قابلة للنمو، من دراسة السوق ونموذج العمل إلى تطوير العمليات وتجربة العميل وبناء خطط النمو.", tags: ["دراسة السوق", "نماذج الأعمال", "استراتيجية النمو", "تطوير العمليات", "تجربة العميل"] },
+      { title: "تصميم وإدارة المتاجر الإلكترونية", description: "تصميم وتجهيز وإدارة المتاجر الإلكترونية من الإطلاق إلى التشغيل والتطوير، مع تحسين تجربة الشراء وتنظيم المنتجات والعروض وربط الأدوات والخدمات اللازمة.", tags: ["سلة", "زد", "Shopify", "إدارة المنتجات", "تجربة المستخدم", "التشغيل والتطوير"] },
+      { title: "برمجة المواقع", description: "تصميم وبرمجة مواقع حديثة ومتجاوبة للشركات والعلامات التجارية، من صفحات الهبوط والمواقع التعريفية إلى المواقع المخصصة المرتبطة بالأنظمة والخدمات.", tags: ["Next.js", "React", "واجهات متجاوبة", "صفحات هبوط", "ربط API", "تطوير مخصص"] },
     ],
     featured: "مشروع أعمل على بنائه", sbaah: "سبعة", category: "منصة للتقنية العقارية",
     sbaahDescription: "منصة تمكّن المطورين والمسوقين والوسطاء العقاريين من إنشاء مواقعهم العقارية وإدارة العقارات والعملاء والفرص البيعية من مكان واحد.",
@@ -42,9 +42,9 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
     interests: "Interests", interestsNote: "The areas I focus on and continuously explore.",
     services: "Services", servicesTitle: "Services built around what you need", servicesNote: "Practical solutions for business growth and digital presence.",
     serviceItems: [
-      { title: "Business Development", description: "Opportunity analysis, business model development, and actionable growth plans." },
-      { title: "E-commerce Design & Management", description: "Designing, operating and improving online stores with a focus on customer experience and growth." },
-      { title: "Web Development", description: "Building modern, fast and responsive websites aligned with brand and business goals." },
+      { title: "Business Development", description: "Turning ideas and opportunities into scalable businesses, from market research and business models to operations, customer experience and growth planning.", tags: ["Market Research", "Business Models", "Growth Strategy", "Operations", "Customer Experience"] },
+      { title: "E-commerce Design & Management", description: "Designing, launching and managing online stores, improving the shopping experience, organizing products and offers, and connecting the tools needed for daily operations.", tags: ["Salla", "Zid", "Shopify", "Product Management", "UX", "Store Operations"] },
+      { title: "Web Development", description: "Designing and developing modern responsive websites for companies and brands, from landing pages and corporate sites to custom websites connected to systems and services.", tags: ["Next.js", "React", "Responsive UI", "Landing Pages", "API Integration", "Custom Development"] },
     ],
     featured: "A project I’m building", sbaah: "Sbaah", category: "A real estate technology platform",
     sbaahDescription: "A platform that helps real estate developers, marketers and brokers create their own property websites and manage properties, customers and sales opportunities in one place.",
@@ -88,7 +88,7 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
             ))}
           </div>
         </section>
-        <section id="services" className="page-section services-section" aria-labelledby="services-title"><div className="section-heading"><div><p className="section-label">03 / {copy.services}</p><h2 id="services-title">{copy.servicesTitle}</h2></div><p>{copy.servicesNote}</p></div><div className="service-stack">{copy.serviceItems.map((service,index)=><article className="service-card" key={service.title} style={{"--service-index": index} as React.CSSProperties}><span className="service-number">0{index+1}</span><div><h3>{service.title}</h3><p>{service.description}</p></div></article>)}</div></section>
+        <section id="services" className="page-section services-section" aria-labelledby="services-title"><div className="section-heading"><div><p className="section-label">03 / {copy.services}</p><h2 id="services-title">{copy.servicesTitle}</h2></div><p>{copy.servicesNote}</p></div><div className="service-stack">{copy.serviceItems.map((service,index)=><article className="service-card" key={service.title} style={{"--service-index": index} as React.CSSProperties}><span className="service-number">0{index+1}</span><div><h3>{service.title}</h3><p>{service.description}</p><div className="service-tags">{service.tags.map(tag=><span key={tag}>{tag}</span>)}</div></div></article>)}</div></section>
         <section id="contact" className="contact" aria-labelledby="contact-title"><div><p className="section-label">04 / {copy.contact}</p><h2 id="contact-title">{copy.contactTitle}</h2><p>{copy.note}</p></div><div className="contact-links"><a className="contact-button primary" href={`mailto:${contact.email}`}><MailIcon className="h-4 w-4" />{contact.emailLabel}</a><SocialLinks arabic={ar} /></div></section>
       </main>
       <footer className="site-footer"><span>{hero.name}</span><span>{copy.location}</span></footer>
