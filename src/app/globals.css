@@ -205,3 +205,6 @@ h1 { font-size: clamp(36px, 4.5vw, 60px); font-weight: 700; line-height: 1.35; m
 
 /* Work cards: compact image card + short caption */
 .work-list{gap:46px}.work-visual{height:clamp(300px,42vw,480px);border-radius:28px}.work-meta{padding-top:18px}.work-meta h3{font-size:clamp(24px,3vw,34px)}.work-meta p{margin-top:5px;font-size:15px}.work-item{max-width:100%}@media(max-width:580px){.work-list{gap:34px}.work-visual{height:220px;border-radius:22px;padding:28px}.work-meta{padding-top:13px}.work-meta h3{font-size:23px}.work-meta p{font-size:13px;margin-top:3px}}
+
+/* Portfolio artwork fills the image card */
+.work-visual img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover}
