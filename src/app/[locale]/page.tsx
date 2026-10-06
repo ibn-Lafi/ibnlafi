@@ -31,9 +31,9 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
     sbaahDescription: "منصة تمكّن المطورين والمسوقين والوسطاء العقاريين من إنشاء مواقعهم العقارية وإدارة العقارات والعملاء والفرص البيعية من مكان واحد.",
     features: ["مواقع عقارية", "إدارة العقارات", "إدارة علاقات العملاء"], visit: "اكتشف سبعة",
     projects: [
-      { name: "دولسيور", category: "تطوير علامة تجارية", logo: "/brands/dulceur.png", description: "تطوير مؤسسة بنان السعادة من محل حلويات تقليدي إلى علامة تجارية، مع تأسيس معمل إنتاج ومنظومة تشغيل." },
-      { name: "غلوردا", category: "تطوير منتج رقمي", logo: "/brands/glorda.svg", description: "تطبيق يجمع الهدايا والورود والكيك والحلويات، شاركت به في برنامج مسك لانشباد 9.0 مع مؤسسة الأمير محمد بن سلمان." },
-      { name: "ڤينت", category: "تجارة إلكترونية", logo: "", description: "علامة ومتجر إلكتروني للمنتجات الموسمية، عملت على بنائه وتطوير تجربته التجارية." },
+      { name: "دولسيور", category: "تطوير وبناء علامة تجارية", logo: "/brands/dulceur.png", description: "تطوير مؤسسة بنان السعادة من محل حلويات تقليدي إلى علامة تجارية، مع تأسيس معمل إنتاج ومنظومة تشغيل." },
+      { name: "غلوردا", category: "تطبيق Marketplace للهدايا والورود", logo: "/brands/glorda.svg", description: "تطبيق يجمع الهدايا والورود والكيك والحلويات، شاركت به في برنامج مسك لانشباد 9.0 مع مؤسسة الأمير محمد بن سلمان." },
+      { name: "ڤينت", category: "علامة ومتجر إلكتروني", logo: "", description: "علامة ومتجر إلكتروني للمنتجات الموسمية، عملت على بنائه وتطوير تجربته التجارية." },
     ],
     contactTitle: "عندك فكرة؟ لنتحدث.", note: "يسعدني التواصل حول المشاريع وفرص العمل.", location: "مكة المكرمة، السعودية", details: "التفاصيل",
   } : {
@@ -54,9 +54,9 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
     sbaahDescription: "A platform that helps real estate developers, marketers and brokers create their own property websites and manage properties, customers and sales opportunities in one place.",
     features: ["Property websites", "Property management", "Customer relationships"], visit: "Explore Sbaah",
     projects: [
-      { name: "Dulcior", category: "Brand development", logo: "/brands/dulceur.png", description: "Developed Benan Al-Saada from a traditional confectionery shop into a brand with its own production facility and operations." },
-      { name: "Glorda", category: "Digital product", logo: "/brands/glorda.svg", description: "An app bringing together gifts, flowers, cakes and sweets, with which I participated in Misk Launchpad 9.0 at the Prince Mohammed bin Salman Foundation." },
-      { name: "VENT", category: "E-commerce", logo: "", description: "A seasonal-products e-commerce brand and store that I helped build and develop." },
+      { name: "Dulcior", category: "Brand building & development", logo: "/brands/dulceur.png", description: "Developed Benan Al-Saada from a traditional confectionery shop into a brand with its own production facility and operations." },
+      { name: "Glorda", category: "Gifts & flowers marketplace app", logo: "/brands/glorda.svg", description: "An app bringing together gifts, flowers, cakes and sweets, with which I participated in Misk Launchpad 9.0 at the Prince Mohammed bin Salman Foundation." },
+      { name: "VENT", category: "E-commerce brand & store", logo: "", description: "A seasonal-products e-commerce brand and store that I helped build and develop." },
     ],
     contactTitle: "Have an idea? Let’s talk.", note: "Open to conversations about projects and work opportunities.", location: "Makkah, Saudi Arabia", details: "Details",
   };
@@ -74,7 +74,7 @@ export default async function LocalePage({ params }: PageProps<"/[locale]">) {
         <section id="work" className="page-section" aria-labelledby="work-title">
           <div className="section-heading"><div><p className="section-label">02 / {copy.work}</p><h2 id="work-title">{copy.selected}</h2></div><p>{copy.selectedNote}</p></div>
           <div className="work-list">
-            {[{ name: copy.sbaah, category: copy.category, logo: "/brands/sbaah.svg", description: copy.sbaahDescription, href: "https://sbaah.com" }, ...copy.projects.map(project => ({ ...project, href: "" }))].map((project, index) => (
+            {[{ name: copy.sbaah, category: ar ? "منصة SaaS للتقنية العقارية" : "PropTech SaaS platform", logo: "/brands/sbaah.svg", description: copy.sbaahDescription, href: "https://sbaah.com" }, ...copy.projects.map(project => ({ ...project, href: "" }))].map((project, index) => (
               <article className="work-item" key={project.name}>
                 <div className="work-visual">
                   {project.logo ? <Image src={project.logo} alt={ar ? `شعار ${project.name}` : `${project.name} logo`} width={250} height={100} sizes="(max-width: 580px) 160px, 250px" /> : <span className="project-wordmark">{project.name}</span>}
